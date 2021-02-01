@@ -37,7 +37,7 @@ namespace Console1
             carManager.Add(new Car { Id = 6, BrandId = 6, ColorId = 3, ModelYear = new DateTime(2019, 11, 12), DailyPrice = 250, Description = "Mercedes" });
             Console.WriteLine(" Yeni araç listeye eklendi\n");
             Console.WriteLine("*********Araç Güncelleme*******\n");
-            carManager.Update(new Car { Id = 1, BrandId = 4, ColorId = 2, ModelYear = new DateTime(2018, 11, 12), DailyPrice = 300, Description = "Audi" });
+            carManager.Update(new Car { Id = 1, ModelYear = new DateTime(2018, 11, 12), DailyPrice = 300, Description = "Audi" });
             Console.WriteLine("Araç özellikleri gücellendi\n");
 
             Console.WriteLine("***********Araç Silme*********\n");
