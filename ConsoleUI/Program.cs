@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Abstarct;
+using DataAccess.Concrete.Ef;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using System;
@@ -11,7 +12,7 @@ namespace Console1
         static void Main(string[] args)
         {
             Console.WriteLine("****Listele*****\n");
-            CarManager carManager = new CarManager(new InMemoryCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
             int i = 0;
             foreach (var car in carManager.GetAll())
             {
@@ -22,29 +23,40 @@ namespace Console1
                 Console.WriteLine("Açıklaması: " + car.Description + "\n");
             }
 
-            Console.WriteLine("********Id ye göre Listele*********\n");
+            Console.WriteLine("********BrandId ye göre Listele*********\n");
             int Id = 1;
-            foreach (var car in carManager.GetById(Id))
+            foreach (var car in carManager.GetCarsByBrandId(Id))
             {
                 Console.WriteLine("{0} nolu Arabanın Özellikleri", Id);
+                Console.WriteLine("BrandId:"+car.BrandId);
                 Console.WriteLine("Model Yılı: " + car.ModelYear.Year);
                 Console.WriteLine("Günlük Ücreti: " + car.DailyPrice);
                 Console.WriteLine("Açıklaması: " + car.Description+"\n");
             }
+            Console.WriteLine("********ColorId ye göre Listele*********\n");
+         
+            foreach (var car in carManager.GetCarsByColorId(Id))
+            {
+                Console.WriteLine("{0} nolu Arabanın Özellikleri", Id);
+                Console.WriteLine("ColorId:" + car.ColorId);
+                Console.WriteLine("Model Yılı: " + car.ModelYear.Year);
+                Console.WriteLine("Günlük Ücreti: " + car.DailyPrice);
+                Console.WriteLine("Açıklaması: " + car.Description + "\n");
+            }
 
             Console.WriteLine("******Yeni Araç Ekleme********\n");
 
-            carManager.Add(new Car { Id = 6, BrandId = 6, ColorId = 3, ModelYear = new DateTime(2019, 11, 12), DailyPrice = 250, Description = "Mercedes" });
-            Console.WriteLine(" Yeni araç listeye eklendi\n");
-            Console.WriteLine("*********Araç Güncelleme*******\n");
-            carManager.Update(new Car { Id = 1, ModelYear = new DateTime(2018, 11, 12), DailyPrice = 300, Description = "Audi" });
-            Console.WriteLine("Araç özellikleri gücellendi\n");
+            //carManager.Add(new Car { BrandId = 2, ColorId = 2, ModelYear = new DateTime(2019, 11, 12), DailyPrice = 250, Description = "Mercedes" });
+            carManager.Add(new Car { BrandId = 3, ColorId = 2, ModelYear = new DateTime(2017, 11, 12), DailyPrice = 180, Description = "A" });
+            //Console.WriteLine("*********Araç Güncelleme*******\n");
+            //carManager.Update(new Car { Id = 1,BrandId=3,ColorId=1 ,ModelYear = new DateTime(2018, 11, 12), DailyPrice = 300, Description = "Ford" });
+            //Console.WriteLine("Araç özellikleri gücellendi\n");
 
-            Console.WriteLine("***********Araç Silme*********\n");
-            carManager.Delete(new Car { Id = 2 });
-            Console.WriteLine("Araç Silindi\n");
+            //Console.WriteLine("***********Araç Silme*********\n");
+            //carManager.Delete(new Car { Id = 2 });
+            //Console.WriteLine("Araç Silindi\n");
 
-            Console.WriteLine("*******İşlemler sonrası oluşan yeni liste*****\n");
+            //Console.WriteLine("*******İşlemler sonrası oluşan yeni liste*****\n");
 
             int x = 0;
             foreach (var car in carManager.GetAll())
