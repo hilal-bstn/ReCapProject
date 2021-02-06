@@ -50,9 +50,9 @@ namespace Business.Concrete
             return _carDal.GetAll(c => c.ColorId == id);
         }
 
-        public List<Car> GetCarsByModelYear(int a)
+        public List<Car> GetCarsByModelYear(int year)
         {
-            return _carDal.GetAll(c => c.ModelYear.Year == a);
+            return _carDal.GetAll(c => c.ModelYear.Year == year);
         }
 
         public List<Car> GetCarsModelYears(int min, int max)
