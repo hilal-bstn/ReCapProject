@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstarct;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Business.Concrete
         {
             if ( car.DailyPrice <= 0)
             {
-                Console.WriteLine("günlük ücret 0 dan büyük olmalıdır!!!");
+                throw new NotImplementedException("Daily price must be positive");
             }
             else { _carDal.Add(car); }
         }
@@ -38,6 +39,11 @@ namespace Business.Concrete
         public Car GetById(int id)
         {
             return _carDal.Get(c=>c.Id==id);
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            return _carDal.GetCarDetails();
         }
 
         public List<Car> GetCarsByBrandId(int id)
