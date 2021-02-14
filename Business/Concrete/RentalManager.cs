@@ -20,8 +20,8 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            var control = CheckReturnDate(rental.CarId);
-            if (!control.Success)
+            var check = CheckReturnDate(rental.CarId);
+            if (!check.Success)
             { return new ErrorResult(Messages.RentalError); }
             
             else {_rentalDal.Add(rental);
