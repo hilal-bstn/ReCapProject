@@ -20,8 +20,8 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            int control = RentalDateControl(rental.CarId);
-            if (control ==1)
+            var control = CheckReturnDate(rental.CarId);
+            if (!control.Success)
             { return new ErrorResult(Messages.RentalError); }
             
             else {_rentalDal.Add(rental);
@@ -29,22 +29,7 @@ namespace Business.Concrete
             
             
         }
-
-        private int RentalDateControl(int id)
-        {
-            int sayac = 0;
-            var result = GetAll();
-            foreach (var rent in result.Data)
-            {
-                if (rent.CarId == id)
-                {
-                    if (rent.ReturnDate == null)
-                    { sayac++; }
-                }
-            }
-            return sayac;
-        }
-
+       
         public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
@@ -54,6 +39,15 @@ namespace Business.Concrete
         {
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
+        }
+
+        public IResult CheckReturnDate(int id)
+        {
+            var result = _rentalDal.GetAll(r => r.CarId == id && r.ReturnDate == null);
+            if (result.Count ==0)
+            { return new SuccessResult(); }
+            else
+            { return new ErrorResult(); }
         }
     }
     

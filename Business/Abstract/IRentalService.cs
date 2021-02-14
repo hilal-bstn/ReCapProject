@@ -11,6 +11,6 @@ namespace Business.Abstract
         IDataResult<List<Rental>> GetAll();
         IResult Add(Rental rental);
         IResult Update(Rental rental);
-
+        IResult CheckReturnDate(int id);
     }
 }
