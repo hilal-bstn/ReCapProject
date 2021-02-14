@@ -36,7 +36,8 @@ namespace Business.Concrete
         }
 
         public IResult Update(Rental rental)
-        {
+        {if (rental.ReturnDate < rental.RentDate)
+            { return new ErrorResult("Güncellenemedi"); }
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
         }
