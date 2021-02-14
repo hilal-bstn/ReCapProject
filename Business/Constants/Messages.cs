@@ -15,7 +15,7 @@ namespace Business.Constants
         public static string CarDailyPriceInvalid="Günlük fiyat sıfırdan yüksek olmalı!!";
         public static string BrandAdded = "Marka eklendi";
         public static string BrandsListed = "Markalar listelendi";
-        public static string BrandDeleted = "Arabalar silindi";
+        public static string BrandDeleted = "Marka silindi";
         public static string BrandNameInvalid = "Marka ismi geçersiz";
         public static string ColorUpdated = "Renk güncellendi";
         public static string ColorAdded = "Renk eklendi";
@@ -26,5 +26,7 @@ namespace Business.Constants
         public static string UserUpdated="Kullanıcı bilgileri güncellendi";
         public static string CustomerAdded="Eklendi";
         public static string RentalError="Aracı kiralayamazsınız.";
+        public static string BrandUpdated="Marka güncellendi";
+        public static string RentalUpdated="Bilgiler güncellendi";
     }
 }

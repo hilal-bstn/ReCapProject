@@ -21,11 +21,12 @@ namespace Business.Concrete
         public IResult Add(Rental rental)
         {
             int control = RentalDateControl(rental.CarId);
-            if (control == 0)
+            if (control ==1)
             { return new ErrorResult(Messages.RentalError); }
             
-            _rentalDal.Add(rental);
-            return new SuccessResult("Araç kiralandı");
+            else {_rentalDal.Add(rental);
+            return new SuccessResult("Araç kiralandı"); }
+            
             
         }
 
@@ -37,7 +38,7 @@ namespace Business.Concrete
             {
                 if (rent.CarId == id)
                 {
-                    if (rent.ReturnDate != null)
+                    if (rent.ReturnDate == null)
                     { sayac++; }
                 }
             }
@@ -52,7 +53,7 @@ namespace Business.Concrete
         public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);
-            return new SuccessResult();
+            return new SuccessResult(Messages.RentalUpdated);
         }
     }
     

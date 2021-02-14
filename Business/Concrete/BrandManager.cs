@@ -49,7 +49,7 @@ namespace Business.Concrete
 
         public IResult Update(Brand brand)
         {    _brandDal.Update(brand);
-            return new SuccessResult(Messages.BrandAdded);
+            return new SuccessResult(Messages.BrandUpdated);
         }
     }
 }
