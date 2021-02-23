@@ -54,7 +54,7 @@
 <ul type="circle">
 					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
 					<ul>
-				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11</code>)<br>
+				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11)</code><br>
 					</ul>
 					</ul>
 
@@ -100,6 +100,15 @@
 ## Business Layer
 
 <b> DataAcess katmanında yer alan operasyonlara ait iş kuralları bu katmanda yer almıştır. Alt kısımdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
+   
+   <ul type="circle">
+					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
+					<ul>
+				<td>&#128205;<t> <code>Autofac(v6.1.0)</code><br>
+					<td>&#128205;<t> <code>Autofac.Extras.DynamicProxy(v6.0.0)</code><br>
+					<td>&#128205;<t> <code>FluentValidation(v9.5.1)</code><br>
+					</ul>
+					</ul>
 
 <ul type="disc">
 	<tr>
@@ -132,6 +141,35 @@
 	
 </ul>
 </ul>
+                                <ul type="circle">
+					<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/DependencyResolvers">Dependency Resolvers</a><br>
+					<ul>
+				<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/DependencyResolvers/Autofac">Autofac</a><br>
+					<ul>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs">AutofacBusinessModule.cs</a><br>
+				
+</ul>
+					
+			
+</ul>
+</ul>
+                                <ul type="circle">
+					<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/ValidationRules">Validation Rules</a><br>
+					<ul>
+				<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/ValidationRules/FluentValidation">Fluent Validation</a><br>
+					<ul>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/BrandValidator.cs">BrandValidator.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/CarValidator.cs">CarValidator.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/ColorValidator.cs">ColorValidator.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/CustomerValidator.cs">CustomerValidator.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/RentalValidator.cs">RentalValidator.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/ValidationRules/FluentValidation/UserValidator.cs">UserValidator.cs</a><br>
+				
+</ul>
+					
+			
+</ul>
+
 </ul>	
 
 ## Core Layer
@@ -140,10 +178,37 @@
 <ul type="circle">
 					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
 					<ul>
-				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11</code>)<br>
+					<td>&#128205;<t> <code>Autofac(v6.1.0)</code><br>	
+						<td>&#128205;<t> <code>Autofac.Extras.DynamicProxy(v6.0.0)</code><br>
+					<td>&#128205;<t> <code>FluentValidation(v9.5.1)</code><br>
+				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11)</code><br>
+				
+</ul>
+</ul>
+<ul type="disc">
+	<tr>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects">Aspects</a>
+                                <ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac">Autofac</a><br>
+					<ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Validation">Validation</a><br>	 
+				<ul type="circle">	 
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Validation/Class1.cs">Class1.cs</a><br>
+				
+</ul>	
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+	<tr>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns">Cross Cutting Concerns</a>
+                                <ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns/Validation">Validation</a><br>
+				<ul type="circle">	 
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/CrossCuttingConcerns/Validation/ValidationTool.cs">ValidationTool.cs</a><br>
 					</ul>
-					</ul>
-	
+						 </ul></ul>
+
 <ul type="disc">
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DataAccess">Data Access</a>
