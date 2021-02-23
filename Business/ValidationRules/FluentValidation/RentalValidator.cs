@@ -13,6 +13,8 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(r => r.CarId).GreaterThan(0);
             RuleFor(r => r.CustomerId).GreaterThan(0);
             RuleFor(r => r.RentDate).NotEmpty();
+            RuleFor(r => r.ReturnDate).GreaterThanOrEqualTo(r=>r.RentDate).When(r=>r.ReturnDate.HasValue).WithMessage("Girilen Tarih bilgileri uyuşmamaktadır.");
+
         }
     }
 }
