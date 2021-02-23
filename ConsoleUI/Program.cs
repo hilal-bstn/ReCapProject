@@ -11,17 +11,17 @@ namespace Console1
     {
         static void Main(string[] args)
         {
-            //ProductDetailGetAllTest();
+            CarDetailGetAllTest();
             //UserGetAllTest();
             //UserGetByIdTest();
             //UserAddTest();
-            RentalAddTest();
+            //RentalAddTest();
         }
 
         private static void RentalAddTest()
         {
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            var result = rentalManager.Add(new Rental { CarId = 3, CustomerId = 2, RentDate = new DateTime(2021, 03, 14) });
+            var result = rentalManager.Add(new Rental { CarId = 2, CustomerId = 2, RentDate = new DateTime(2021, 03, 14) });
             Console.WriteLine(result.Message);
         }
 
@@ -55,7 +55,7 @@ namespace Console1
             }
         }
 
-        private static void ProductDetailGetAllTest()
+        private static void CarDetailGetAllTest()
         {
             CarManager carManager = new CarManager(new EfCarDal());
             var result = carManager.GetCarDetails();
