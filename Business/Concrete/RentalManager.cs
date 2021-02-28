@@ -37,6 +37,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
         }
+
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Update(Rental rental)
         {
@@ -50,7 +51,7 @@ namespace Business.Concrete
             if (result.Count ==0)
             { return new SuccessResult(); }
             else
-            { return new ErrorResult(); }
+            { return new ErrorResult("Aracı kiralayamazsınız; araç henüz teslim edilmemiş."); }
         }
     }
     

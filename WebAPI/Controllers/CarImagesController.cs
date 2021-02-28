@@ -24,16 +24,15 @@ namespace WebAPI.Controllers
             _carImageService = carImageService;
             _webHostEnvironment = webHostEnvironment;
         }
+       
         [HttpPost("add")]
         public IActionResult Add([FromForm] IFormFile objectFile, [FromForm] CarImage carImage)
         {
-            var filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
-            
-            
+            string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
             var result = _carImageService.Add(objectFile,filePath,carImage);
             if (result.Success)
             { return Ok(result); }
-            return BadRequest();
+            return BadRequest(result);
 
 
         }
@@ -61,6 +60,15 @@ namespace WebAPI.Controllers
             var result = _carImageService.GetAll();
             if (result.Success)
             { return Ok(result); }
+            return BadRequest(result);
+
+        }
+        [HttpGet("getcarid")]
+        public IActionResult GetCarDetails(int id)
+        {
+            var result = _carImageService.GetByCarId(id);
+            if (result.Success)
+            { return Ok(result.Data); }
             return BadRequest(result);
 
         }

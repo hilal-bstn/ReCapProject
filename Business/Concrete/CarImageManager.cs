@@ -17,7 +17,7 @@ namespace Business.Concrete
     public class CarImageManager : ICarImageService
     {
         ICarImageDal _carImageDal;
-       
+
         public CarImageManager(ICarImageDal carImageDal)
         {
             _carImageDal = carImageDal;
@@ -26,29 +26,31 @@ namespace Business.Concrete
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(IFormFile objectFile, string filePath, CarImage carImage)
         {
-            var result = BusinessRules.Run(CheckIfImageLimit(carImage.CarId));
+            IResult result = BusinessRules.Run(CheckIfImageLimit(carImage.CarId));
             if (result != null)
             { return result; }
-            carImage.ImagePath=CheckImagePath(objectFile, filePath);
-            carImage.Date = DateTime.Now;
-            _carImageDal.Add(carImage);
-            return new SuccessResult();
-
+            else
+            {
+                carImage.ImagePath = CheckImagePath(objectFile, filePath);
+                carImage.Date = DateTime.Now;
+                _carImageDal.Add(carImage);
+                return new SuccessResult();
+            }
 
         }
 
-        
+
         public IResult Delete(CarImage carImage)
         {
             IResult result = BusinessRules.Run();
             if (result != null)
             { return result; }
-            else
-            { 
-                FileHelper.Delete(CarImagePath(carImage));
-                _carImageDal.Delete(carImage);
-                return new SuccessResult();
-            }
+
+
+            FileHelper.Delete(CarImagePath(carImage));
+            _carImageDal.Delete(carImage);
+            return new SuccessResult();
+
         }
         [ValidationAspect(typeof(CarValidator))]
         public IResult Update(IFormFile objectFile, string filePath, CarImage carImage)
@@ -70,7 +72,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c => c.CarId == CarId));
         }
 
-        
+
         private string CheckDefaultImage(IFormFile objectFile, string filePath, CarImage carImage)
         {
             if (CarImagePath(carImage) == filePath + "default.png")
@@ -99,10 +101,11 @@ namespace Business.Concrete
 
         private IResult CheckIfImageLimit(int carId)
         {
-            var result = _carImageDal.GetAll(c => c.CarId == carId).Count;
-            if (result >= 5)
-            {return new ErrorResult("Bir araba için sadace 5 araba girilir.");  }
-            return new SuccessResult();
+            var result = _carImageDal.GetAll(r => r.CarId == carId);
+            if (result.Count <= 5)
+            { return new SuccessResult(); }
+            else
+            { return new ErrorResult("Bir araç için 5 adet resim yüklenebilmektedir"); }
         }
     }
 }
