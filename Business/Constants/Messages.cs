@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -28,5 +29,7 @@ namespace Business.Constants
         public static string RentalError="Araç henüz teslim edilmemiş. Aracı kiralayamazsınız.";
         public static string BrandUpdated="Marka güncellendi";
         public static string RentalUpdated="Bilgiler güncellendi";
+        public static string AuthorizationDenied = "yetkiniz yok";
+        
     }
 }
