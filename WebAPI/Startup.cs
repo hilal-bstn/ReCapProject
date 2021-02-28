@@ -1,3 +1,4 @@
+using Autofac.Extensions.DependencyInjection;
 using Business;
 using Business.Abstract;
 using Business.Concrete;
@@ -21,17 +22,20 @@ namespace WebAPI
 {
     public class Startup
     {
+        
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {  
             services.AddControllers();
+            
             //services.AddSingleton<ICarService, CarManager>();//Autofac kurulmadan önce
             //services.AddSingleton<ICarDal, EfCarDal>();
 

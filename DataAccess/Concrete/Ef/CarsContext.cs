@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.Ef
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Cars;Trusted_Connection=true");
         }
-
+        public DbSet<CarImage> CarImages { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Color> Colors { get; set; }
