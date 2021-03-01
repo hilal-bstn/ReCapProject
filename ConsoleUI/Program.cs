@@ -29,35 +29,35 @@ namespace Console1
             Console.WriteLine(result.Message);
         }
 
-        private static void UserAddTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            var result = userManager.Add(new User { FirstName = "Hilal", LastName = "B", Email = "Hilal@", Password = "123" });
+        //private static void UserAddTest()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
+        //    var result = userManager.Add(new User { FirstName = "Hilal", LastName = "B", Email = "Hilal@", Password = "123" });
             
-        }
+        //}
 
-        private static void UserGetByIdTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            var result = userManager.GetById(1);
-            if (result.Success == true)
-            {
-                Console.WriteLine(result.Data.FirstName + " " + result.Data.LastName);
-            }
-        }
+        //private static void UserGetByIdTest()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
+        //    var result = userManager.GetById(1);
+        //    if (result.Success == true)
+        //    {
+        //        Console.WriteLine(result.Data.FirstName + " " + result.Data.LastName);
+        //    }
+        //}
 
-        private static void UserGetAllTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            var result = userManager.GetAll();
-            if (result.Success == true)
-            {
-                foreach (var user in result.Data)
-                {
-                    Console.WriteLine(user.UserId + "\t" + user.FirstName);
-                }
-            }
-        }
+        //private static void UserGetAllTest()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
+        //    var result = userManager.GetAll();
+        //    if (result.Success == true)
+        //    {
+        //        foreach (var user in result.Data)
+        //        {
+        //            Console.WriteLine(user.UserId + "\t" + user.FirstName);
+        //        }
+        //    }
+        //}
 
         private static void CarDetailGetAllTest()
         {

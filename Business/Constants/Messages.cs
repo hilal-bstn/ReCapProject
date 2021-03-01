@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
@@ -30,6 +31,11 @@ namespace Business.Constants
         public static string BrandUpdated="Marka güncellendi";
         public static string RentalUpdated="Bilgiler güncellendi";
         public static string AuthorizationDenied = "yetkiniz yok";
-        
+        public static string RegisterSuccess="Kullanıcı kaydı başarıyla tamamlanmıştır.";
+        public static string UserAvailable="Girdiğiniz Email adresi daha önceden kullanılmıştır.";
+        public static string SuccessLogin="Giriş başarılı. Hoşgeldiniz..";
+        public static string ErrorPassword="Hatalı şifre girişi.";
+        public static string UserNotFound="Girdiğiniz email adresine kayıtlı bir kullanıcı bulunamamıştır!!";
+        public static string TokenCreated="Token oluşturulmuştur.";
     }
 }
