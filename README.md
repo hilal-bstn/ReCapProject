@@ -409,14 +409,14 @@
 
 <b>Projeye WebAPI katmanının eklenmesiyle beraber ConsoleUI katmanı yeterli olmadığı için test aracı olarak Postman kullanılmaya başlanılmıştır. Alt kısımda örnek olarak bazı operasyonlara ait test sonuçlarını görmektesiniz.<br>
 <br>
-<b><em><ins>-Cars<br></ins>
+<b><em>-<ins>Cars<br></ins>
 <br>
 <br>
 ![](https://user-images.githubusercontent.com/77468985/108640191-46bcb780-74a9-11eb-83d7-a3037cb2ef6d.png)
 <br>
 <br>
 <br>
-<b><em><ins>-Rental<br></ins>
+<b><em>-<ins>Rental<br></ins>
 <br>
 <br>
 ![](https://user-images.githubusercontent.com/77468985/108640225-84214500-74a9-11eb-93b2-70635c7b1253.png)
@@ -430,6 +430,25 @@
 <br>
 
 ![](https://user-images.githubusercontent.com/77468985/108640276-c21e6900-74a9-11eb-9bda-0a937d14ba9a.png)
+<br>
+<br>
+<br>
+<b><em>-<ins>User<br></ins>
+<br>
+<br>
+![](https://user-images.githubusercontent.com/77468985/109572822-f1af2000-7afe-11eb-8f46-799d590ec9c8.png)
+<br>
+<br>
+<br>
+![](https://user-images.githubusercontent.com/77468985/109572859-055a8680-7aff-11eb-96d8-7bad598e3805.png)
+<br>
+<br>
+<br>
+![](https://user-images.githubusercontent.com/77468985/109572923-1e633780-7aff-11eb-9c43-c6c7e7e30c4e.png)
+<br>
+<br>
+<br>
+![](https://user-images.githubusercontent.com/77468985/109572993-3b980600-7aff-11eb-853e-7190a66dd2f0.png)
 
 
 ### <td>&#128206;<b>Writer
