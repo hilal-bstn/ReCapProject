@@ -37,11 +37,11 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Rental.cs">Rental.cs</a><br>
 				</ul>
 			</li>
-			<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Entities/DTOs">DTOs</a>
+			<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Entities/DTOs">DTOs</a><br>
 				<ul type="circle">
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CarDetailDto.cs">CarDetailDto.cs</a>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForLoginDto.cs">UserForLoginDto.cs</a>
-					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CarDetailDto.cs">CarDetailDto.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForLoginDto.cs">UserForLoginDto.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a><br>
 				</ul>
 			
 </ul>		
