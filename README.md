@@ -111,6 +111,10 @@
 				<td>&#128205;<t> <code>Autofac(v6.1.0)</code><br>
 					<td>&#128205;<t> <code>Autofac.Extras.DynamicProxy(v6.0.0)</code><br>
 					<td>&#128205;<t> <code>FluentValidation(v9.5.1)</code><br>
+					<td>&#128205;<t> <code>Microsoft.AspNetCore.Http(v2.2.2)</code><br>
+					<td>&#128205;<t> <code>Microsoft.AspNetCore.Http.Abstractions(v2.2.0)</code><br>
+					<td>&#128205;<t> <code>Microsoft.AspNetCore.Http.Features(v5.0.3)</code><br>
+					<td>&#128205;<t> <code>Microsoft.Extensions.DependencyInjection(v5.0.1)</code><br>
 					</ul>
 					</ul>
 
@@ -201,7 +205,10 @@
 					<td>&#128205;<t> <code>Autofac(v6.1.0)</code><br>	
 						<td>&#128205;<t> <code>Autofac.Extras.DynamicProxy(v6.0.0)</code><br>
 					<td>&#128205;<t> <code>FluentValidation(v9.5.1)</code><br>
+				<td>&#128205;<t> <code>Microsoft.AspNetCore.Http.Features(v5.0.3)</code><br>
 				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11)</code><br>
+				<td>&#128205;<t> <code>Microsoft.IdentityModel.Tokens(v6.8.0)</code><br>
+				<td>&#128205;<t> <code>System.IdentityModel.Tokens.Jwt(v6.8.0)</code><br>
 				
 </ul>
 </ul>
@@ -351,6 +358,14 @@
 				
 ## WebAPI 
 
+<ul type="circle">
+					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
+					<ul>
+				<td>&#128205;<t> <code>Autofac.Extensions.DependencyInjection(v7.1.0)</code><br>
+				<td>&#128205;<t> <code>Microsoft.AspNetCore.Authentication.JwtBearer(v3.1.12)</code><br>
+				
+</ul>
+</ul>
 <ul type="disc">
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/WebAPI/Controllers"> Controllers</a>
