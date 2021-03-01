@@ -402,15 +402,21 @@
 	
 ![](https://user-images.githubusercontent.com/77468985/108640042-9c449480-74a8-11eb-8995-7a9576bd1502.png)	
 
-![RentalError](https://user-images.githubusercontent.com/77468985/108640122-f2193c80-74a8-11eb-846a-bade942d39a0.png)
+![](https://user-images.githubusercontent.com/77468985/108640122-f2193c80-74a8-11eb-846a-bade942d39a0.png)
 
 ![](https://user-images.githubusercontent.com/77468985/108639532-10316d80-74a6-11eb-8686-ac8dc1a716d9.png)
 ##
 
-<b>Projeye WebAPI katmanının eklenmesiyle beraber ConsoleUI katmanı yeterli olmadığı için test aracı olarak Postman kullanılmaya başlanılmıştır. Alt kısımda örnek olarak bazı operasyonlara ait test sonuçlarını görmektesiniz.
-
+<b>Projeye WebAPI katmanının eklenmesiyle beraber ConsoleUI katmanı yeterli olmadığı için test aracı olarak Postman kullanılmaya başlanılmıştır. Alt kısımda örnek olarak bazı operasyonlara ait test sonuçlarını görmektesiniz.<br>
+<br>
+<b><em><ins>-Cars<br></ins>
+<br>
+<br>
 ![](https://user-images.githubusercontent.com/77468985/108640191-46bcb780-74a9-11eb-83d7-a3037cb2ef6d.png)
 <br>
+<br>
+<br>
+<b><em><ins>-Rental<br></ins>
 <br>
 <br>
 ![](https://user-images.githubusercontent.com/77468985/108640225-84214500-74a9-11eb-93b2-70635c7b1253.png)
