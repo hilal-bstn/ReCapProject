@@ -11,7 +11,10 @@
  
 <b>Veritabanı, Visual Studio 2019 içindeki SQL Server Object Explorer kısmından yola çıkılarak oluşturulmuştur. Alt kısımda bu veritabanına ait tabloların alan isimlerini ve veri tiplerini görebilirsiniz.  
 
-![](https://user-images.githubusercontent.com/77468985/108639804-75d22980-74a7-11eb-9bda-c2a0231471ea.png) 
+![](https://user-images.githubusercontent.com/77468985/109575645-4fde0200-7b03-11eb-9570-bfa4d9e612fa.png)
+![](https://user-images.githubusercontent.com/77468985/109575681-5ff5e180-7b03-11eb-8475-a8626ff76d5f.png)
+![](https://user-images.githubusercontent.com/77468985/109575965-ed393600-7b03-11eb-8afa-aa04b858caf8.png)
+
 
 
 
