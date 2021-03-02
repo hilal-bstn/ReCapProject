@@ -50,7 +50,7 @@ namespace WebAPI.Controllers
             var result = _authService.CreateAccessToken(registerResult.Data);
             if (result.Success)
             {
-                return Ok(registerResult.Message);
+                return Ok(result.Data);
             }
 
             return BadRequest(result.Message);
