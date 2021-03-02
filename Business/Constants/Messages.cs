@@ -37,5 +37,9 @@ namespace Business.Constants
         public static string ErrorPassword="Hatalı şifre girişi.";
         public static string UserNotFound="Girdiğiniz email adresine kayıtlı bir kullanıcı bulunamamıştır!!";
         public static string TokenCreated="Token oluşturulmuştur.";
+        public static string Successupdated="Başarıyla güncellenmiştir.";
+        public static string CarImageDeleted="Resim silinmiştir.";
+        public static string CarImageAdded="Resim sisteme eklenmiştir.";
+        public static string LimitError= "Bir araç için 5 adet resim yüklenebilmektedir";
     }
 }

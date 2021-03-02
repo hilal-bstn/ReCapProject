@@ -23,7 +23,7 @@ namespace Core.Utilities.FileHelper
         }
         public static string Update(IFormFile file,string filepath,string carImagepath)
         {
-            File.Delete(carImagepath);
+            File.Delete(filepath+carImagepath);
             //string updatePath = Path.Combine(carImagepath);
             string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
             //var FileNamePath = Path.Combine(filepath,fileName);
@@ -35,13 +35,17 @@ namespace Core.Utilities.FileHelper
             }
             
 
-            return filepath+fileName;
+            return fileName;
         }
-        public static void Delete(string path)
+        public Byte[] Get(string filepath,string imagepath)
         {
-            
-                System.IO.File.Delete(path);
-            
+            Byte[] b = System.IO.File.ReadAllBytes(filepath + "cardetails.png");
+            //return File(b, "image/png");
+            return b;
+        }
+        public static void Delete(string filepath,string imagepath)
+        {
+           System.IO.File.Delete(filepath+imagepath);
         }
         
 

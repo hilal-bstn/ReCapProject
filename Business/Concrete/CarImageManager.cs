@@ -11,17 +11,18 @@ using System.Text;
 using Core.Utilities.FileHelper;
 using Core.Aspects.Autofac.Validation;
 using Business.ValidationRules.FluentValidation;
+using Business.Constants;
 
 namespace Business.Concrete
 {
     public class CarImageManager : ICarImageService
     {
         ICarImageDal _carImageDal;
-
-        public CarImageManager(ICarImageDal carImageDal)
+        ICarService _carService;
+        public CarImageManager(ICarImageDal carImageDal, ICarService carService)
         {
             _carImageDal = carImageDal;
-
+            _carService = carService;
         }
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(IFormFile objectFile, string filePath, CarImage carImage)
@@ -31,34 +32,34 @@ namespace Business.Concrete
             { return result; }
             else
             {
-                carImage.ImagePath = CheckImagePath(objectFile, filePath);
+                carImage.ImagePath = FileHelper.AddFile(objectFile, filePath);
                 carImage.Date = DateTime.Now;
                 _carImageDal.Add(carImage);
-                return new SuccessResult();
+                return new SuccessResult(Messages.CarImageAdded);
             }
 
         }
 
 
-        public IResult Delete(CarImage carImage)
+        public IResult Delete(string filepath,CarImage carImage)
         {
             IResult result = BusinessRules.Run();
             if (result != null)
             { return result; }
 
 
-            FileHelper.Delete(CarImagePath(carImage));
+            FileHelper.Delete(filepath,CarImagePath(carImage.Id));
             _carImageDal.Delete(carImage);
-            return new SuccessResult();
+            return new SuccessResult(Messages.CarImageDeleted);
 
         }
         [ValidationAspect(typeof(CarValidator))]
         public IResult Update(IFormFile objectFile, string filePath, CarImage carImage)
         {
-            carImage.ImagePath = CheckDefaultImage(objectFile, filePath, carImage);
+            carImage.ImagePath = FileHelper.Update(objectFile, filePath,CarImagePath(carImage.Id));
             carImage.Date = DateTime.Now;
             _carImageDal.Update(carImage);
-            return new SuccessResult();
+            return new SuccessResult(Messages.Successupdated);
         }
 
 
@@ -71,32 +72,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c => c.CarId == CarId));
         }
-
-
-        private string CheckDefaultImage(IFormFile objectFile, string filePath, CarImage carImage)
+       
+        private string CarImagePath(int id)
         {
-            if (CarImagePath(carImage) == filePath + "default.png")
-            { return (filePath + FileHelper.AddFile(objectFile, filePath)); }
-            else
-            { return (FileHelper.Update(objectFile, filePath, CarImagePath(carImage))); }
-        }
-
-        private static string CheckImagePath(IFormFile objectFile, string filePath)
-        {
-            if (objectFile != null)
-            {
-                return (filePath + FileHelper.AddFile(objectFile, filePath));
-            }
-            else
-            {
-                return (filePath + "default.png");
-            }
-        }
-
-
-        private string CarImagePath(CarImage carImage)
-        {
-            return _carImageDal.Get(c => c.Id == carImage.Id).ImagePath;
+            return _carImageDal.Get(c => c.Id == id).ImagePath;
         }
 
         private IResult CheckIfImageLimit(int carId)
@@ -105,7 +84,9 @@ namespace Business.Concrete
             if (result.Count <= 5)
             { return new SuccessResult(); }
             else
-            { return new ErrorResult("Bir araç için 5 adet resim yüklenebilmektedir"); }
+            { return new ErrorResult(Messages.LimitError); }
         }
+        
+
     }
 }
