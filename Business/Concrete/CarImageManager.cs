@@ -27,7 +27,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(IFormFile objectFile, string filePath, CarImage carImage)
         {
-            IResult result = BusinessRules.Run(CheckIfImageLimit(carImage.CarId));
+            IResult result = BusinessRules.Run(CheckIfImageLimit(carImage.CarId),checkid(carImage.CarId));
             if (result != null)
             { return result; }
             else
@@ -62,22 +62,18 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Successupdated);
         }
 
-
-        public IDataResult<List<CarImage>> GetAll()
-        {
-            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll());
-        }
-
         public IDataResult<List<CarImage>> GetByCarId(int CarId)
         {
-            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c => c.CarId == CarId));
+            if (!checkid(CarId).Success)
+            { return new ErrorDataResult<List<CarImage>>("Araç kaydı bulunamadı."); }
+
+            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c=>c.CarId==CarId));
         }
        
         private string CarImagePath(int id)
         {
             return _carImageDal.Get(c => c.Id == id).ImagePath;
         }
-
         private IResult CheckIfImageLimit(int carId)
         {
             var result = _carImageDal.GetAll(r => r.CarId == carId);
@@ -86,7 +82,15 @@ namespace Business.Concrete
             else
             { return new ErrorResult(Messages.LimitError); }
         }
-        
 
+        private IResult checkid(int carId)
+        {
+            var result = _carService.GetAll();
+            foreach (var i in result.Data)
+            {if (i.Id == carId)
+                { return new SuccessResult(); } }
+            return new ErrorResult();
+        }
+        
     }
 }

@@ -37,17 +37,28 @@ namespace Core.Utilities.FileHelper
 
             return fileName;
         }
-        public Byte[] Get(string filepath,string imagepath)
-        {
-            Byte[] b = System.IO.File.ReadAllBytes(filepath + "cardetails.png");
-            //return File(b, "image/png");
-            return b;
-        }
         public static void Delete(string filepath,string imagepath)
         {
            System.IO.File.Delete(filepath+imagepath);
         }
-        
+        public static Byte[] Get(string filepath,string imagepath)
+        {
+          
+            Byte[] b = System.IO.File.ReadAllBytes(filepath +imagepath);
+            //return File(b, "image/png");
+            return b;
+        }
+        //public static List<Byte[]> GetAll(string filepath, List<string> images)
+        //{
+            
+        //    List<Byte[]>imagesFiles=new List<byte[]>();
+        //    foreach (var i in images)
+        //    {
+        //       imagesFiles.Add(System.IO.File.ReadAllBytes(filepath + i));
+        //    }
+            
+        //    return imagesFiles;
+        //}
 
     }
 }
