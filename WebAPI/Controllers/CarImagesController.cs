@@ -54,39 +54,31 @@ namespace WebAPI.Controllers
             if (result.Success)
             { return Ok(result.Message); }
             return BadRequest(result.Message);
-
         }
-        //[HttpGet("getall")]
-        //public IActionResult GetAll()
-        //{
-        //    string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
-        //    var result = _carImageService.GetAll();
-        //    foreach (var i in result.Data)
-        //    {
-        //        var image= File(FileHelper.Get(filePath, i.ImagePath),"image/png");
-        //        return image;
-        //    }
-        //    if (result.Success)
-        //    { return Ok(result); }
-        //    return BadRequest(result);
 
-        //}
         [HttpGet("getcarid")]
         public IActionResult GetCarDetails(int id)
         {
-
+            List<IActionResult> file = new List<IActionResult>();
             string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
             var result = _carImageService.GetByCarId(id);
             if (result.Success)
             {
                 if (result.Data.Count == 0)
                 {
-                    
-                    return File(FileHelper.Get(filePath, "default.png"), "image/png");
+                  file.Add(File(FileHelper.Get(filePath, "default.png"), "image/png"));
                 }
-             return Ok(result.Data); 
+                else
+                {
+                    foreach (var i in result.Data)
+                    { file.Add(File(FileHelper.Get(filePath, i.ImagePath), "image/jpeg")); }
+                }
+                return file[0];
             }
             return BadRequest(result.Message);
+            
+           
         }
+        
     }
 }  

@@ -48,17 +48,17 @@ namespace Core.Utilities.FileHelper
             //return File(b, "image/png");
             return b;
         }
-        //public static List<Byte[]> GetAll(string filepath, List<string> images)
-        //{
+        public static List<Byte[]> GetAll(string filepath, List<string> images)
+        {
             
-        //    List<Byte[]>imagesFiles=new List<byte[]>();
-        //    foreach (var i in images)
-        //    {
-        //       imagesFiles.Add(System.IO.File.ReadAllBytes(filepath + i));
-        //    }
+            List<Byte[]>imagesFiles=new List<byte[]>();
+            foreach (var i in images)
+            {
+               imagesFiles.Add(System.IO.File.ReadAllBytes(filepath + i));
+            }
             
-        //    return imagesFiles;
-        //}
+            return imagesFiles;
+        }
 
     }
 }
