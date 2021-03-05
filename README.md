@@ -221,6 +221,28 @@
                                 <ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac">Autofac</a><br>
 					<ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a><br>	 
+				<ul type="circle">	 
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheAspect.cs">CacheAspect.cs</a><br>
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheRemoveAspect.cs">CacheRemoveAspect.cs</a><br>
+				
+</ul>	
+</ul>
+					<ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><br>	 
+				<ul type="circle">	 
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Performance/PerformanceAspect.cs">PerformanceAspect.cs</a><br>
+				
+</ul>	
+</ul>
+					<ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><br>	 
+				<ul type="circle">	 
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Transaction/TransactionScopeAspect.cs">TransactionScopeAspect.cs</a><br>
+				
+</ul>	
+</ul>
+					<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Validation">Validation</a><br>	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Validation/ValidationAspect.cs">ValidationAspect.cs</a><br>
@@ -233,6 +255,15 @@
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns">Cross Cutting Concerns</a>
                                 <ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns/Caching">Caching</a><br>
+					<ul type="circle">
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns/Caching/Microsoft">Microsoft</a><br><ul type="circle">
+<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/CrossCuttingConcerns/Caching/Microsoft/MemoryCacheManager.cs">MemoryCacheManager.cs</a><br>
+					</ul>
+		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/CrossCuttingConcerns/Caching/ICacheManager.cs">ICacheManager.cs</a><br>
+					</ul>
+					 </ul>
+				<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/CrossCuttingConcerns/Validation">Validation</a><br>
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/CrossCuttingConcerns/Validation/ValidationTool.cs">ValidationTool.cs</a><br>
@@ -252,7 +283,14 @@
 				</ul>
 				
 </ul>	
-	
+	<ul type="circle">
+	<tr>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DependencyResolvers">Dependency Resolvers</a>
+                                <ul type="circle">
+			                 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/DependencyResolvers/CoreModule.cs">CoreModule.cs</a><br>
+		
+</ul>
+</ul>
 <ul type="disc">
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Entities">Entities</a>
@@ -278,6 +316,7 @@
                                 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ClaimExtensions.cs">ClaimExtensions.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ClaimsPrincipalExtensions.cs">ClaimsPrincipalExtensions.cs</a><br>
+						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ServiceCollectionExtensions.cs">ServiceCollectionExtensions.cs</a><br>
 				</ul>
 				
 </ul>	
@@ -300,6 +339,7 @@
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/IOC">IOC</a><br>
 						 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/IOC/ServiceTool.cs">ServiceTool.cs</a><br>
+				       <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/IOC/ICoreModule.cs">ICoreModule.cs</a><br>
 </ul>
 </ul>
 	<ul type="circle">
