@@ -208,6 +208,7 @@
 					<td>&#128205;<t> <code>Autofac(v6.1.0)</code><br>	
 						<td>&#128205;<t> <code>Autofac.Extras.DynamicProxy(v6.0.0)</code><br>
 					<td>&#128205;<t> <code>FluentValidation(v9.5.1)</code><br>
+						<td>&#128205;<t> <code>Microsoft.AspNetCore.Http(v2.2.2)</code><br>
 				<td>&#128205;<t> <code>Microsoft.AspNetCore.Http.Features(v5.0.3)</code><br>
 				<td>&#128205;<t> <code>Microsoft.EntityFrameworkCore.SqlServer(v3.1.11)</code><br>
 				<td>&#128205;<t> <code>Microsoft.IdentityModel.Tokens(v6.8.0)</code><br>
