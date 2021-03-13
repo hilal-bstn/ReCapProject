@@ -20,11 +20,10 @@ namespace Business.Concrete
     public class CarManager : ICarService
     {
         ICarDal _carDal;
-        ICarImageService ImageService;
-        public CarManager(ICarDal carDal, ICarImageService ımageService)
+        public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-            ImageService = ımageService;
+            
         }
         [SecuredOperation("admin")]
         [ValidationAspect(typeof(CarValidator))]
@@ -34,13 +33,14 @@ namespace Business.Concrete
             _carDal.Add(car);
             return new SuccessResult(Messages.CarAdded);
         }
-
+        [SecuredOperation("admin")]
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
             return new SuccessResult(Messages.CarDeleted);
 
         }
+        [SecuredOperation("admin")]
         [PerformanceAspect(5)]
         public IDataResult<List<Car>> GetAll()
         {

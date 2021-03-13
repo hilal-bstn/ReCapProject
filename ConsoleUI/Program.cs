@@ -59,32 +59,32 @@ namespace Console1
         //    }
         //}
 
-        private static void CarDetailGetAllTest()
-        {
-            CarManager carManager = new CarManager(new EfCarDal());
-            var result = carManager.GetCarDetails();
+        //private static void CarDetailGetAllTest()
+        //{
+        //    CarManager carManager = new CarManager(new EfCarDal());
+        //    var result = carManager.GetCarDetails();
 
 
-            if (result.Success == true)
-            {
-                int i = 0;
-                foreach (var cardetail in result.Data)
-                {
-                    i++;
-                    Console.WriteLine("{0})", i);
-                    Console.WriteLine("Brand Name: " + cardetail.BrandName);
-                    Console.WriteLine("Color Name: " + cardetail.ColorName);
-                    Console.WriteLine("Daily Price: " + cardetail.DailyPrice);
-                    Console.WriteLine("Description: " + cardetail.Description + "\n");
-                }
-                Console.WriteLine(result.Message);
+        //    if (result.Success == true)
+        //    {
+        //        int i = 0;
+        //        foreach (var cardetail in result.Data)
+        //        {
+        //            i++;
+        //            Console.WriteLine("{0})", i);
+        //            Console.WriteLine("Brand Name: " + cardetail.BrandName);
+        //            Console.WriteLine("Color Name: " + cardetail.ColorName);
+        //            Console.WriteLine("Daily Price: " + cardetail.DailyPrice);
+        //            Console.WriteLine("Description: " + cardetail.Description + "\n");
+        //        }
+        //        Console.WriteLine(result.Message);
 
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result.Message);
+        //    }
+        //}
 
         
 

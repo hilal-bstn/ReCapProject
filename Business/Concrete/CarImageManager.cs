@@ -12,6 +12,7 @@ using Core.Utilities.FileHelper;
 using Core.Aspects.Autofac.Validation;
 using Business.ValidationRules.FluentValidation;
 using Business.Constants;
+using Business.BusinessAspect.Autofac;
 
 namespace Business.Concrete
 {
@@ -24,6 +25,7 @@ namespace Business.Concrete
             _carImageDal = carImageDal;
             _carService = carService;
         }
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(IFormFile objectFile, string filePath, CarImage carImage)
         {
@@ -40,7 +42,7 @@ namespace Business.Concrete
 
         }
 
-
+        [SecuredOperation("admin")]
         public IResult Delete(string filepath,CarImage carImage)
         {
             IResult result = BusinessRules.Run();
@@ -53,6 +55,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarImageDeleted);
 
         }
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Update(IFormFile objectFile, string filePath, CarImage carImage)
         {

@@ -7,6 +7,7 @@ using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -34,10 +35,16 @@ namespace Business.Concrete
             
             
         }
-       
+        [SecuredOperation("admin")]
         public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+        }
+
+        public IDataResult<List<RentalDetailsDto>> GetRentalDetails()
+        {
+            return new SuccessDataResult<List<RentalDetailsDto>>(_rentalDal.GetRentalDetails(), Messages.RentalDetailsListed);
+
         }
 
         [ValidationAspect(typeof(RentalValidator))]

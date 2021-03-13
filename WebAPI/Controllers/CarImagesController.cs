@@ -75,10 +75,11 @@ namespace WebAPI.Controllers
                 }
                 return file[0];
             }
+
             return BadRequest(result.Message);
             
-           
         }
-        
+        }
+
     }
-}  
+  
