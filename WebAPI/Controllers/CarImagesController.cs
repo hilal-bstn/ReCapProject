@@ -32,8 +32,8 @@ namespace WebAPI.Controllers
             string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
             var result = _carImageService.Add(objectFile, filePath, carImage);
             if (result.Success)
-            { return Ok(result.Message); }
-            return BadRequest(result.Message);
+            { return Ok(result); }
+            return BadRequest(result);
 
 
         }
@@ -43,8 +43,8 @@ namespace WebAPI.Controllers
             string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
             var result = _carImageService.Delete(filePath, carImage);
             if (result.Success)
-            { return Ok(result.Message); }
-            return BadRequest(result.Message);
+            { return Ok(result); }
+            return BadRequest(result);
         }
         [HttpPost("update")]
         public IActionResult Update([FromForm] IFormFile objectFile, [FromForm] CarImage carImage)
@@ -52,8 +52,16 @@ namespace WebAPI.Controllers
             string filePath = _webHostEnvironment.WebRootPath + "\\Images\\";
             var result = _carImageService.Update(objectFile, filePath, carImage);
             if (result.Success)
-            { return Ok(result.Message); }
-            return BadRequest(result.Message);
+            { return Ok(result); }
+            return BadRequest(result);
+        } 
+        [HttpGet("getall")]
+        public IActionResult Getall(int id)
+        {
+            var result = _carImageService.GetByCarId(id);
+            if (result.Success)
+            { return Ok(result); }
+            return BadRequest(result);
         }
 
         [HttpGet("getcarid")]

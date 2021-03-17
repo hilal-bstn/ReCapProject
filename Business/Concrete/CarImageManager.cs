@@ -25,7 +25,7 @@ namespace Business.Concrete
             _carImageDal = carImageDal;
             _carService = carService;
         }
-        [SecuredOperation("admin")]
+        
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(IFormFile objectFile, string filePath, CarImage carImage)
         {
@@ -34,7 +34,7 @@ namespace Business.Concrete
             { return result; }
             else
             {
-                carImage.ImagePath = FileHelper.AddFile(objectFile, filePath);
+                carImage.ImagePath = filePath+(FileHelper.AddFile(objectFile, filePath));
                 carImage.Date = DateTime.Now;
                 _carImageDal.Add(carImage);
                 return new SuccessResult(Messages.CarImageAdded);
@@ -42,7 +42,7 @@ namespace Business.Concrete
 
         }
 
-        [SecuredOperation("admin")]
+        
         public IResult Delete(string filepath,CarImage carImage)
         {
             IResult result = BusinessRules.Run();
@@ -55,7 +55,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarImageDeleted);
 
         }
-        [SecuredOperation("admin")]
+        
         [ValidationAspect(typeof(CarValidator))]
         public IResult Update(IFormFile objectFile, string filePath, CarImage carImage)
         {
@@ -65,14 +65,19 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Successupdated);
         }
 
-        public IDataResult<List<CarImage>> GetByCarId(int CarId)
+        public IDataResult<List<CarImage>> GetByCarId(int carId)
         {
-            if (!checkid(CarId).Success)
+            if (!checkid(carId).Success)
             { return new ErrorDataResult<List<CarImage>>("Araç kaydı bulunamadı."); }
-
-            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c=>c.CarId==CarId));
+            else
+            {
+                var result = _carImageDal.GetAll(c => c.CarId == carId);
+                if (result.Count == 0)
+                {result = new List<CarImage> { new CarImage { Id = 0, CarId = carId, ImagePath = "default.png" } }; }
+                return new SuccessDataResult<List<CarImage>>(result);
+            }
         }
-       
+
         private string CarImagePath(int id)
         {
             return _carImageDal.Get(c => c.Id == id).ImagePath;

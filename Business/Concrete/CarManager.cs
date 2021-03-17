@@ -40,7 +40,6 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarDeleted);
 
         }
-        [SecuredOperation("admin")]
         [PerformanceAspect(5)]
         public IDataResult<List<Car>> GetAll()
         {
@@ -59,6 +58,21 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.CarsListed);
             
+        }
+        public IDataResult<List<CarDetailDto>> GetCarDetailsByBrandId(int id)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c=>c.BrandId==id));
+
+        }
+        public IDataResult<List<CarDetailDto>> GetCarDetailsByColorId(int id)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.ColorId == id));
+
+        }
+        public IDataResult<List<CarDetailDto>> GetCarDetailsByCarId(int id)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.CarId == id));
+
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
