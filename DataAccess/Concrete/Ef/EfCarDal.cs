@@ -31,6 +31,7 @@ namespace DataAccess.Concrete.Ef
                                  ColorName=r.ColorName,
                                  DailyPrice=c.DailyPrice,
                                  Description=c.Description};
+                             
 
                 return filter == null ? result.ToList() : result.Where(filter).ToList();
             }

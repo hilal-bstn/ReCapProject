@@ -23,7 +23,7 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
         [ValidationAspect(typeof(RentalValidator))]
-        [SecuredOperation("user")]
+        //[SecuredOperation("user")]
         public IResult Add(Rental rental)
         {
             IResult result = BusinessRules.Run(CheckReturnDate(rental.CarId));
