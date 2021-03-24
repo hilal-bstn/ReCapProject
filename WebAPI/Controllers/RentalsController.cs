@@ -39,8 +39,8 @@ namespace WebAPI.Controllers
         {
             var result = _rentalService.Update(rental);
             if (result.Success)
-            { return Ok(result.Message); }
-            return BadRequest(result.Message);
+            { return Ok(result); }
+            return BadRequest(result);
         }
         [HttpGet("getrentaldetails")]
         public IActionResult GetRentalDetails()
