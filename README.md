@@ -38,12 +38,15 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/CarImage.cs">CarImage.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Color.cs">Color.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Customer.cs">Customer.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Payment.cs">Payment.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Rental.cs">Rental.cs</a><br>
 				</ul>
 			</li>
 			<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Entities/DTOs">DTOs</a><br>
 				<ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CarDetailDto.cs">CarDetailDto.cs</a><br>
+				        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CustomerDetailDto.cs">CustomerDetailDto.cs</a><br>
+						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/RentalDetailsDto.css">RentalDetailsDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForLoginDto.cs">UserForLoginDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a><br>
 				</ul>
@@ -75,6 +78,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/ICustomerDal.cs">ICustomerDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IRentalDal.cs">IRentDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IUserDal.cs">IUserDal.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IPaymentDal.cs">IPaymentDal.cs</a><br>
+					
 </ul>
 </ul>
 <ul type="disc">
@@ -92,6 +97,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCarDal.cs">EfCarDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfRentalDal.cs">EfRentalDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfUserDal.cs">EfUserDal.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfPaymentDal.cs">EfPaymentDal.cs</a><br>
 </ul>
 </ul>           
 				<ul type="circle">
@@ -134,6 +140,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/ICustomerService.cs">ICustomerService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IRentalService.cs">IRentalService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IUserService.cs">IUserService.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IPaymentService.cs">IPaymentService.cs</a><br>
 </ul>
 </ul>
 <ul type="disc">
@@ -159,6 +166,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/CustomerManager.cs">CustomerManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/RentalManager.cs">RentalManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/UserManager.cs">UserManager.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/PaymentManager.cs">PaymentManager.cs</a><br>
 </ul>
 </ul>
 				<ul type="circle">
