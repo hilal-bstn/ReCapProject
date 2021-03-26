@@ -342,7 +342,7 @@
 	<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/Business">Business</a><br>
 						 <ul type="circle">
-					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Business/BusinessRules.cs">BusinessRules.cs</a> <td>&#128205;<t> <code>İş kurallarının genel bir yapıdan geçmesi sağlanılmıştır. </code><br>
+					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Business/BusinessRules.cs">BusinessRules.cs</a> <td>&#128205;İş kurallarının genel bir yapıdan geçmesi sağlanılmıştır.<br>
 						
 				
 					
@@ -351,7 +351,7 @@
 	<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/FileHelper">FileHelper</a><br>
 						 <ul type="circle">
-					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/FileHelper/FileHelper.cs">FileHelper.cs</a><td>&#128205;<t> <code>Dosya işlemleri CRUD operasyonları için genel hale getirilmiştir.. </code><br><br>
+					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/FileHelper/FileHelper.cs">FileHelper.cs</a><td>&#128205;Dosya işlemleri CRUD operasyonları için genel hale getirilmiştir.<br><br>
 </ul>
 </ul>
 <ul type="circle">
