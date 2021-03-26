@@ -209,8 +209,15 @@
 </ul>	
 
 ## Core Layer
-<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır. Alt kısımdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
-
+<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır.<br>	
+	&#9989;Bellek yönetimi(Caching)<br>
+	&#9989;Operasyonların performans kontrolü(Performance)<br>
+	&#9989;Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi<br>
+	&#9989;CRUD operasyonlarının sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmesi (Bu operasyonların veri tabanıyla bağlantısı için <em>EntityFramework<em>ten yararlanılmıştır.) <br>
+	&#9989;Genel bağımlılık zincirleri oluşturulması (Bu zincirlerin oluşumunda <em>Autofac</em> ten yararlanılmıştır.) <br>
+	&#9989;CUD(IResult) ve R(IDataResult) operasyonları için ayrı ayrı error ve success yönetimi yapılması <br><br>
+	
+ Alt kısımdaki bağlantıları kullanarak detayları inceleyebilirsiniz.<br>
 <ul type="circle">
 					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
 					<ul>
@@ -231,7 +238,7 @@
                                 <ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac">Autofac</a><br>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a>  <td>&#128205;<t>Bellek yönetimi<br>	 	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a><br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheAspect.cs">CacheAspect.cs</a><br>
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheRemoveAspect.cs">CacheRemoveAspect.cs</a><br>
@@ -239,14 +246,14 @@
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><td>&#128205;<t>Operasyonların performans kontrolü<br>	 	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Performance/PerformanceAspect.cs">PerformanceAspect.cs</a><br>
 				
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><td>&#128205;<t>Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi<br>		 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><br>		 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Transaction/TransactionScopeAspect.cs">TransactionScopeAspect.cs</a><br>
 				
@@ -281,7 +288,6 @@
 						 </ul></ul>
 
 <ul type="disc">
-	<td>&#128206;Data Access klasörüyle CRUD operasyonları sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmiştir. Bu operasyonların veri tabanıyla bağlantısı için <em>EntityFramework<em>ten yararlanılmıştır. <br>
 	<tr>
 		<td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DataAccess">Data Access</a>
                                 <ul type="circle">
@@ -295,7 +301,6 @@
 				
 </ul>	
 	<ul type="circle">
-	<td>&#128206;Dependency Resolvers klasörüyle genel bağımlılık zincirleri oluşturulmuştur. Bu zincirlerin oluşumunda <em>Autofac</em> ten yararlanılmıştır.  <br>
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DependencyResolvers">Dependency Resolvers</a>
                                 <ul type="circle">
@@ -304,7 +309,6 @@
 </ul>
 </ul>
 <ul type="disc">
-	<td>&#128206; Entities klasörü altındaki IDto ve IEntity interfaceleriyle, yazılan operasyonların genelleştirilmesi sağlanmıştır. <br>
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Entities">Entities</a>
 	     <ul type="circle">
@@ -374,7 +378,6 @@
 </ul>
 </ul>
                                 <ul type="circle">
-	<td>&#128206; Results klasörüyle CUD(IResult) ve R(IDataResult) operasyonları için ayrı ayrı error ve success yönetimi yapılmıştır. <br>
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/Results">Results</a><br>
 						 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/DataResult.cs">DataResult.cs</a><br>
