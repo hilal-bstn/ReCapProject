@@ -1,10 +1,10 @@
-# ReCapProject
+# ReCapProject(Back-End)
 
 ![](https://user-images.githubusercontent.com/77468985/108639180-479f1a80-74a4-11eb-9e9b-8bd51907e836.png) 
 #
 
-<b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir.<br> 
-<td>&#128206;<ins><b>Projenin frontend kısmına <a href="https://github.com/hilal-bstn/ReCapProject-Frontend">buradan</a> ulaşabilirsiniz.</ins>
+<b>ReCapProject, SOLID prensiplerine bağlı kalınarak ve N-Katmalı mimari yapısıyla C# programlama diline ait; henüz geliştirilme aşamasında olan bir araç kiralama projesidir. Şu anda projenin back-end kısmını incelemektesiniz.<br> 
+<td>&#128206;<ins><b>Projenin frontend kısmına <a href="https://github.com/hilal-bstn/ReCapProject-Frontend/blob/master/README.md">buradan</a> ulaşabilirsiniz.</ins>
 	
 ![](https://user-images.githubusercontent.com/77468985/108639775-4e7b5c80-74a7-11eb-91bc-2f1419e179db.png)
 
@@ -38,12 +38,15 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/CarImage.cs">CarImage.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Color.cs">Color.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Customer.cs">Customer.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Payment.cs">Payment.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Rental.cs">Rental.cs</a><br>
 				</ul>
 			</li>
 			<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Entities/DTOs">DTOs</a><br>
 				<ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CarDetailDto.cs">CarDetailDto.cs</a><br>
+				        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CustomerDetailDto.cs">CustomerDetailDto.cs</a><br>
+						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/RentalDetailsDto.css">RentalDetailsDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForLoginDto.cs">UserForLoginDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a><br>
 				</ul>
@@ -75,6 +78,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/ICustomerDal.cs">ICustomerDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IRentalDal.cs">IRentDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IUserDal.cs">IUserDal.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IPaymentDal.cs">IPaymentDal.cs</a><br>
+					
 </ul>
 </ul>
 <ul type="disc">
@@ -92,6 +97,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCarDal.cs">EfCarDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfRentalDal.cs">EfRentalDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfUserDal.cs">EfUserDal.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfPaymentDal.cs">EfPaymentDal.cs</a><br>
 </ul>
 </ul>           
 				<ul type="circle">
@@ -134,6 +140,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/ICustomerService.cs">ICustomerService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IRentalService.cs">IRentalService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IUserService.cs">IUserService.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IPaymentService.cs">IPaymentService.cs</a><br>
 </ul>
 </ul>
 <ul type="disc">
@@ -159,6 +166,7 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/CustomerManager.cs">CustomerManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/RentalManager.cs">RentalManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/UserManager.cs">UserManager.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/PaymentManager.cs">PaymentManager.cs</a><br>
 </ul>
 </ul>
 				<ul type="circle">
@@ -201,8 +209,15 @@
 </ul>	
 
 ## Core Layer
-<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır. CRUD operasyonları bu katmanla beraber sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmiştir. Alt kısımdaki bağlantıları kullanarak detayları inceleyebilirsiniz.
-
+<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır.<br><br>	
+	&#9989;Bellek yönetimi(Caching)<br>
+	&#9989;Operasyonların performans kontrolü(Performance)<br>
+	&#9989;Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi<br>
+	&#9989;CRUD operasyonlarının sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmesi (Bu operasyonların veri tabanıyla bağlantısı için <em>EntityFramework<em>ten yararlanılmıştır.) <br>
+	&#9989;Genel bağımlılık zincirleri oluşturulması (Bu zincirlerin oluşumunda <em>Autofac</em> ten yararlanılmıştır.) <br>
+	&#9989;CUD(IResult) ve R(IDataResult) operasyonları için ayrı ayrı error ve success yönetimi yapılması <br><br>
+	
+ Alt kısımdaki bağlantıları kullanarak detayları inceleyebilirsiniz.<br>
 <ul type="circle">
 					<td>&#128230;<ins><b>NuGet Packages</b></ins><br>
 					<ul>
@@ -223,7 +238,7 @@
                                 <ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac">Autofac</a><br>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a><br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheAspect.cs">CacheAspect.cs</a><br>
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheRemoveAspect.cs">CacheRemoveAspect.cs</a><br>
@@ -231,14 +246,14 @@
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Performance/PerformanceAspect.cs">PerformanceAspect.cs</a><br>
 				
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><br>		 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Transaction/TransactionScopeAspect.cs">TransactionScopeAspect.cs</a><br>
 				
@@ -274,7 +289,7 @@
 
 <ul type="disc">
 	<tr>
-        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DataAccess">Data Access</a>
+		<td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DataAccess">Data Access</a>
                                 <ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/DataAccess/EntitiyFramework">Entity Framework</a><br>
 				<ul type="circle">	 
@@ -296,12 +311,12 @@
 <ul type="disc">
 	<tr>
         <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Entities">Entities</a>
-                                <ul type="circle">
+	     <ul type="circle">
 	<tr>
-        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Entities/Concrete">Concrete</a>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Entities/Concrete">Concrete</a>   <td>&#128205;<t>Login, register işlemleri ve bir kullacıya atanan roller genel olarak her projede olmasından dolayı bu işlemlere ait nesneler Core katmanın da oluşturulmutur.<br>
                                 <ul type="circle">
-			                 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Entities/Concrete/OperationClaim.cs">OperationClaim.cs</a><br>
-					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Entities/Concrete/User.cs">User.cs</a><br>
+                                  <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Entities/Concrete/OperationClaim.cs">OperationClaim.cs</a><br>
+		                   <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Entities/Concrete/User.cs">User.cs</a><br>
                                    <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Entities/Concrete/UserOperationClaim.cs">UserOperationClaim.cs</a><br>
 		
 </ul>
@@ -318,6 +333,9 @@
                                 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ClaimExtensions.cs">ClaimExtensions.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ClaimsPrincipalExtensions.cs">ClaimsPrincipalExtensions.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ErrorDetails.cs">ErrorDetails.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ExceptionMiddleware.cs">ExceptionMiddleware.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ExceptionMiddlewareExtensions.cs">ExceptionMiddlewareExtensions.cs</a><br>
 						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Extensions/ServiceCollectionExtensions.cs">ServiceCollectionExtensions.cs</a><br>
 				</ul>
 				
@@ -328,13 +346,16 @@
 	<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/Business">Business</a><br>
 						 <ul type="circle">
-					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Business/BusinessRules.cs">BusinessRules.cs</a><br>
+					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Business/BusinessRules.cs">BusinessRules.cs</a> <td>&#128205;İş kurallarının genel bir yapıdan geçmesi sağlanılmıştır.<br>
+						
+				
+					
 </ul>
 </ul>
 	<ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/FileHelper">FileHelper</a><br>
 						 <ul type="circle">
-					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/FileHelper/FileHelper.cs">FileHelper.cs</a><br>
+					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/FileHelper/FileHelper.cs">FileHelper.cs</a><td>&#128205;Dosya işlemleri CRUD operasyonları için genel hale getirilmiştir.<br><br>
 </ul>
 </ul>
 <ul type="circle">
@@ -349,7 +370,7 @@
 						 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Interceptors/AspectInterceptorSelector.cs">AspectInterceptorSelector.cs</a><br>
 						 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Interceptors/MethodInterception.cs">MethodInterception.cs</a><br>
-							 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs">MethodInterceptionBaseAttribute.cs</a><br>
+							 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs">MethodInterceptionBaseAttribute.cs</a><br><br>
 						  
 						
 						
@@ -360,13 +381,13 @@
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Utilities/Results">Results</a><br>
 						 <ul type="circle">
 					 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/DataResult.cs">DataResult.cs</a><br>
-						 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/ErrorDataResult.cs">ErrorDataResult.cs</a><br>
-							 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/ErrorResult.cs">ErrorResult.cs</a><br>
-						  <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/IDataResult.cs">IDataResult.cs</a><br>
-						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/IResult.cs">IResult.cs</a><br>	  
-							<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/Result.cs">Result.cs</a><br>
-								<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/SuccessDataResult.cs">SuccessDataResult.cs</a><br>
-							<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/SuccessResult.cs">SuccessResult.cs</a><br>
+			                 <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/ErrorDataResult.cs">ErrorDataResult.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/ErrorResult.cs">ErrorResult.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/IDataResult.cs">IDataResult.cs</a><br>
+				         <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/IResult.cs">IResult.cs</a><br>	  
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/Result.cs">Result.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/SuccessDataResult.cs">SuccessDataResult.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Utilities/Results/SuccessResult.cs">SuccessResult.cs</a><br>
 						
 							
 </ul>
@@ -452,7 +473,7 @@
 ![](https://user-images.githubusercontent.com/77468985/108639532-10316d80-74a6-11eb-8686-ac8dc1a716d9.png)
 ##
 
-<b>Projeye WebAPI katmanının eklenmesiyle beraber ConsoleUI katmanı yeterli olmadığı için test aracı olarak Postman kullanılmaya başlanılmıştır. Alt kısımda örnek olarak bazı operasyonlara ait test sonuçlarını görmektesiniz.<br>
+<b>Projeye WebAPI nin eklenmesiyle beraber ConsoleUI katmanı yeterli olmadığı için test aracı olarak Postman kullanılmaya başlanılmıştır. Alt kısımda örnek olarak bazı operasyonlara ait test sonuçlarını görmektesiniz.<br>
 <br>
 <b><em>-<ins>Cars<br></ins>
 <br>
