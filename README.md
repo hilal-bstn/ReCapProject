@@ -231,7 +231,7 @@
                                 <ul type="circle">
 					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac">Autofac</a><br>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Caching">Caching</a>  <td>&#128205;<t> <code>Bellek yönetimi</code><br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheAspect.cs">CacheAspect.cs</a><br>
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Caching/CacheRemoveAspect.cs">CacheRemoveAspect.cs</a><br>
@@ -239,14 +239,14 @@
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Performance">Performance</a><td>&#128205;<t><code>Operasyonların performans kontrolü</code> <br>	 	 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Performance/PerformanceAspect.cs">PerformanceAspect.cs</a><br>
 				
 </ul>	
 </ul>
 					<ul type="circle">
-					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><br>	 
+					 <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Core/Aspects/Autofac/Transaction">Transaction</a><td>&#128205;<t><code>Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi yapılmıştır.</code> <br>		 
 				<ul type="circle">	 
 		<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Core/Aspects/Autofac/Transaction/TransactionScopeAspect.cs">TransactionScopeAspect.cs</a><br>
 				
