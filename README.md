@@ -209,7 +209,7 @@
 </ul>	
 
 ## Core Layer
-<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır.<br>	
+<b>Core katmanı operasyonların generic yapılarla genelleştirildiği, her proje için kullanılabilecek potansiyele sahip bir katmandır.<br><br>	
 	&#9989;Bellek yönetimi(Caching)<br>
 	&#9989;Operasyonların performans kontrolü(Performance)<br>
 	&#9989;Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi<br>
