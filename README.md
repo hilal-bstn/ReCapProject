@@ -217,7 +217,7 @@
 	&#9989;Bellek yönetimi(Caching)<br>
 	&#9989;Operasyonların performans kontrolü(Performance)<br>
 	&#9989;Bir grup operasyonun sırayla, sağlıklı bir şekilde çalışması için transaction yönetimi<br>
-	&#9989;CRUD operasyonlarının sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmesi (Bu operasyonların veri tabanıyla bağlantısı için <em>EntityFramework<em>ten yararlanılmıştır.) <br>
+	&#9989;CRUD operasyonlarının sadace IEntity interface'ne bağımlı olan nesneler için genelleştirilmesi  <br>
 	&#9989;Genel bağımlılık zincirleri oluşturulması (Bu zincirlerin oluşumunda <em>Autofac</em> ten yararlanılmıştır.) <br>
 	&#9989;CUD(IResult) ve R(IDataResult) operasyonları için ayrı ayrı error ve success yönetimi yapılması <br><br>
 	
