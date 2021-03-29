@@ -12,7 +12,7 @@ using Core.Utilities.FileHelper;
 using Core.Aspects.Autofac.Validation;
 using Business.ValidationRules.FluentValidation;
 using Business.Constants;
-using Business.BusinessAspect.Autofac;
+using Business.BusinessAspects.Autofac;
 
 namespace Business.Concrete
 {

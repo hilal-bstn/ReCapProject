@@ -1,5 +1,5 @@
 ﻿using Business.Abstract;
-using Business.BusinessAspect.Autofac;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -23,13 +23,13 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
        
-        [SecuredOperation("rental.add,user")]
+        //[SecuredOperation("rental.add,user")]
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
-            IResult result = BusinessRules.Run(CheckReturnDate(rental.CarId));
+            IResult result = BusinessRules.Run(CheckRentDate(rental));
             if (result != null)
-            { return result; }
+            { return new ErrorResult("Araç girdiğiniz tarihlerde uygun değil."); }
 
             else {_rentalDal.Add(rental);
             return new SuccessResult("Araç kiralandı"); }
@@ -54,15 +54,35 @@ namespace Business.Concrete
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
         }
-
+        //return tarihler null olduğunda(eski)
         private IResult CheckReturnDate(int id)
         {
             var result = _rentalDal.GetAll(r => r.CarId == id && r.ReturnDate == null);
             if (result.Count ==0)
             { return new SuccessResult(); }
             else
-            { return new ErrorResult("Aracı kiralayamazsınız; araç henüz teslim edilmemiş."); }
+            { return new ErrorResult(); }
         }
+        //return tarihler girilmeye başlandığında(yeni)
+        private IResult CheckRentDate(Rental rental)
+        {
+            var result = _rentalDal.GetAll(r => r.CarId == rental.CarId && 
+            (r.RentDate<=rental.RentDate
+            &&rental.RentDate<=r.ReturnDate)
+            || (rental.RentDate <= r.RentDate 
+            && r.RentDate <= rental.ReturnDate));
+            if (result.Count == 0)
+            { return new SuccessResult(); }
+            else
+            { return new ErrorResult(); }
+        }
+        //tablo:5.3.2021-8.3.2021
+        //olasılıklar--tek bir kayıt için
+        //gönderilen1:4.3.2021-9.3.2021
+        //gönderilen2:6.3.2021-9.3.2021
+        //gönderilen3:4.3.2021-7.3.2021
+        //gönderilen4:6.3.2021-7.3.2021
+        //gönderilen5:5.3.2021-6.3.2021
     }
     
 }

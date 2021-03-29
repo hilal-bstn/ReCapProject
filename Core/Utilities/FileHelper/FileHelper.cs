@@ -41,14 +41,14 @@ namespace Core.Utilities.FileHelper
         {
            System.IO.File.Delete(filepath+imagepath);
         }
-        public static Byte[] Get(string filepath,string imagepath)
+        public static Byte[] Get(string filepath,string imagepath)//file
         {
           
             Byte[] b = System.IO.File.ReadAllBytes(filepath +imagepath);
             //return File(b, "image/png");
             return b;
         }
-        public static List<Byte[]> GetAll(string filepath, List<string> images)
+        public static List<Byte[]> GetAll(string filepath, List<string> images)//file
         {
             
             List<Byte[]>imagesFiles=new List<byte[]>();

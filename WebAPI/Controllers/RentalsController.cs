@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
         { var result = _rentalService.Add(rental);
             if (result.Success)
             { return Ok(result); }
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
         [HttpPost("update")]
         public IActionResult Update(Rental rental)
