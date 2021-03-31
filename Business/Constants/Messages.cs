@@ -43,5 +43,7 @@ namespace Business.Constants
         public static string LimitError= "Bir araç için 5 adet resim yüklenebilmektedir";
         public static string CustomersListed="Müşteriler Listelendi";
         public static string RentalDetailsListed="Araç Kiralamaları Listelendi";
+        public static string CustomerFindeksScoreAdded="Findeks Puanı Eklendi";
+        public static string CustomerFindeksScoreUpdated="Findeks Puanı Güncellendi";
     }
 }

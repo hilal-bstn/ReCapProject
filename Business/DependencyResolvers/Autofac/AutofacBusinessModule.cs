@@ -47,8 +47,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
-            
-
+            builder.RegisterType<CustomerFindeksScoreManager>().As<ICustomerFindeksScoreService>();
+            builder.RegisterType<EfCustomerFindeksScoreDal>().As<ICustomerFindeksScoreDal>();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

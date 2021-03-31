@@ -2,6 +2,7 @@
 using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
@@ -17,22 +18,29 @@ namespace Business.Concrete
     public class RentalManager : IRentalService
     {
         IRentalDal _rentalDal;
-
-        public RentalManager(IRentalDal rentalDal)
+        ICustomerFindeksScoreService _customerFindeksScoreService;
+        
+        public RentalManager(IRentalDal rentalDal, ICustomerFindeksScoreService customerFindeksScoreService)
         {
             _rentalDal = rentalDal;
+            _customerFindeksScoreService = customerFindeksScoreService;
+           
         }
-       
+
         //[SecuredOperation("rental.add,user")]
         [ValidationAspect(typeof(RentalValidator))]
+        [TransactionScopeAspect]//kiralama ve findekspuanı ekleme işleminin sırayla yapılması için.
         public IResult Add(Rental rental)
         {
             IResult result = BusinessRules.Run(CheckRentDate(rental));
             if (result != null)
-            { return new ErrorResult("Araç girdiğiniz tarihlerde uygun değil."); }
+            { 
+                return new ErrorResult("Araç girdiğiniz tarihlerde uygun değil."); }
 
-            else {_rentalDal.Add(rental);
-            return new SuccessResult("Araç kiralandı"); }
+            else {
+                _rentalDal.Add(rental);
+                _customerFindeksScoreService.FindeksScoreAddOrUpdate(rental.CustomerId);
+                return new SuccessResult("Araç kiralandı"); }
             
             
         }
@@ -64,25 +72,29 @@ namespace Business.Concrete
             { return new ErrorResult(); }
         }
         //return tarihler girilmeye başlandığında(yeni)
-        private IResult CheckRentDate(Rental rental)
-        {
-            var result = _rentalDal.GetAll(r => r.CarId == rental.CarId && 
-            (r.RentDate<=rental.RentDate
-            &&rental.RentDate<=r.ReturnDate)
-            || (rental.RentDate <= r.RentDate 
-            && r.RentDate <= rental.ReturnDate));
-            if (result.Count == 0)
-            { return new SuccessResult(); }
-            else
-            { return new ErrorResult(); }
-        }
         //tablo:5.3.2021-8.3.2021
         //olasılıklar--tek bir kayıt için
         //gönderilen1:4.3.2021-9.3.2021
         //gönderilen2:6.3.2021-9.3.2021
         //gönderilen3:4.3.2021-7.3.2021
-        //gönderilen4:6.3.2021-7.3.2021
-        //gönderilen5:5.3.2021-6.3.2021
+        //gönderilen4:6.3.2021-7.3.2021 
+        //bu olasıklara göre Yeni Kural:
+        private IResult CheckRentDate(Rental rental)
+        {
+            var result = _rentalDal.GetAll(r => r.CarId == rental.CarId && 
+            (r.RentDate<=rental.RentDate&&rental.RentDate<=r.ReturnDate)
+            || (rental.RentDate <= r.RentDate&& r.RentDate <= rental.ReturnDate));
+            if (result.Count == 0)
+            { return new SuccessResult(); }
+            else
+            { return new ErrorResult(); }
+        }
+
+        
+        
+
+        
+
     }
     
 }

@@ -14,6 +14,8 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(r => r.CustomerId).GreaterThan(0);
             RuleFor(r => r.RentDate).NotEmpty();
             RuleFor(r => r.ReturnDate).GreaterThanOrEqualTo(r=>r.RentDate).When(r=>r.ReturnDate.HasValue).WithMessage("Girilen tarih bilgileri uyuşmamaktadır.");
+            RuleFor(r => r.RentDate).GreaterThan(DateTime.Now);
+            RuleFor(r => r.ReturnDate).GreaterThan(DateTime.Now);
 
         }
     }
