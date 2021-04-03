@@ -16,9 +16,11 @@
  
 <b>Veritabanı, Visual Studio 2019 içindeki SQL Server Object Explorer kısmından yola çıkılarak oluşturulmuştur. Alt kısımda bu veritabanına ait tabloların alan isimlerini ve veri tiplerini görebilirsiniz.  
 
-![](https://user-images.githubusercontent.com/77468985/109575645-4fde0200-7b03-11eb-9570-bfa4d9e612fa.png)
+![](https://user-images.githubusercontent.com/77468985/113464069-b9b73780-9432-11eb-997d-82bd02a6f13d.png)
 ![](https://user-images.githubusercontent.com/77468985/109575681-5ff5e180-7b03-11eb-8475-a8626ff76d5f.png)
 ![](https://user-images.githubusercontent.com/77468985/109575965-ed393600-7b03-11eb-8afa-aa04b858caf8.png)
+![](https://user-images.githubusercontent.com/77468985/113491234-ea04e180-94d7-11eb-841d-5594db715a72.png)
+
 
 
 
@@ -44,15 +46,19 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Customer.cs">Customer.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Payment.cs">Payment.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/Rental.cs">Rental.cs</a><br>
+				       <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/CustomerFindeksScore.cs">CustomerFindeksScore.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/Concrete/UserCreditCard.cs">UserCreditCard.cs</a><br>
 				</ul>
 			</li>
 			<td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Entities/DTOs">DTOs</a><br>
 				<ul type="circle">
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CarDetailDto.cs">CarDetailDto.cs</a><br>
 				        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/CustomerDetailDto.cs">CustomerDetailDto.cs</a><br>
-						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/RentalDetailsDto.css">RentalDetailsDto.cs</a><br>
+						<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/RentalDetailsDto.cs">RentalDetailsDto.cs</a><br>
+					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserDetailDto.cs">UserDetailDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForLoginDto.cs">UserForLoginDto.cs</a><br>
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForUpdateDto.cs">UserForUpdateDto.cs</a><br>
 				</ul>
 			
 </ul>		
@@ -82,7 +88,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/ICustomerDal.cs">ICustomerDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IRentalDal.cs">IRentDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IUserDal.cs">IUserDal.cs</a><br>
-				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IPaymentDal.cs">IPaymentDal.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/IUserCreditCardDal.cs">IUserCreditCardDal.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Abstract/ICustomerFindeksScoreDal.cs">ICustomerFindeksScoreDal.cs</a><br>
 					
 </ul>
 </ul>
@@ -98,10 +105,10 @@
 			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCarImageDal.cs">EfCarImageDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfColorDal.cs">EfColorDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCustomerDal.cs">EfCustomerDal.cs</a><br>
-				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCarDal.cs">EfCarDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfRentalDal.cs">EfRentalDal.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfUserDal.cs">EfUserDal.cs</a><br>
-			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfPaymentDal.cs">EfPaymentDal.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfUserCreditCardDal.cs">EfUserCreditCardDal.cs</a><br>
+			         <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/DataAccess/Concrete/Ef/EfCustomerFindeksScoreDal.cs">EfCustomerFindeksScoreDal.cs</a><br>
 </ul>
 </ul>           
 				<ul type="circle">
@@ -144,7 +151,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/ICustomerService.cs">ICustomerService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IRentalService.cs">IRentalService.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IUserService.cs">IUserService.cs</a><br>
-			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IPaymentService.cs">IPaymentService.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/IUserCreditCardService.cs">IUserCreditCardService.cs</a><br>
+			         <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Abstract/ICustomerFindeksScoreService.cs">ICustomerFindeksScoreService.cs</a><br>
 </ul>
 </ul>
 <ul type="disc">
@@ -170,7 +178,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/CustomerManager.cs">CustomerManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/RentalManager.cs">RentalManager.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/UserManager.cs">UserManager.cs</a><br>
-			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/PaymentManager.cs">PaymentManager.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/UserCreditCardManager.cs">UserCreditCardManager.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/Concrete/CustomerFindeksScoreManager.cs">CustomerFindeksScoreManager.cs</a><br>
 </ul>
 </ul>
 				<ul type="circle">
@@ -448,6 +457,8 @@
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/WebAPI/Controllers/CustomersController.cs">CustomersController.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/WebAPI/Controllers/RentalsController.cs">RentalsController.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/WebAPI/Controllers/UsersController.cs">UsersController.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/WebAPI/Controllers/UserCreditCardsController.cs">UserCreditCardsController.cs</a><br>
+			        <td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/WebAPI/Controllers/CustomersFindeksScoresController.cs">CustomersFindeksScoresController.cs</a><br>
 </ul>
 </ul>
 <ul type="disc">
