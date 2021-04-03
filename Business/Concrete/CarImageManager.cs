@@ -13,6 +13,7 @@ using Core.Aspects.Autofac.Validation;
 using Business.ValidationRules.FluentValidation;
 using Business.Constants;
 using Business.BusinessAspects.Autofac;
+using Core.Aspects.Autofac.Transaction;
 
 namespace Business.Concrete
 {
@@ -42,7 +43,7 @@ namespace Business.Concrete
 
         }
 
-        
+        [TransactionScopeAspect]
         public IResult Delete(string filepath,CarImage carImage)
         {
             IResult result = BusinessRules.Run();

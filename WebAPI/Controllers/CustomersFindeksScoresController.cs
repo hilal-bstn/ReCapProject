@@ -18,15 +18,16 @@ namespace WebAPI.Controllers
         {
             _customerFindeksScoreService = customerFindeksScoreService;
         }
-        //puan ekleme kiralama yapılırken
+        
         [HttpGet("checkFindeksScore")]
-        public IActionResult CheckFindeksScore(int carId, int customerId)
+        public ActionResult checkFindeksScore(int carId, int customerId)
         {
-            var result = _customerFindeksScoreService.CheckFindeksScore(carId, customerId);
-            if (result.Success)
-            { return Ok(result); }
-            return BadRequest(result);
-
+            var result =_customerFindeksScoreService.CheckFindeksScore(carId, customerId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return Ok(result);
         }
     }
 }
