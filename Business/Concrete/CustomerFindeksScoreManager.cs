@@ -61,9 +61,12 @@ namespace Business.Concrete
             var customerfindeksscore = checkTotalScore(customerId);
             if (customerfindeksscore >= car.Data.MinFindeksScore)
             {
-                return new SuccessResult("Findeks puanı onaylandı");
+                return new SuccessResult("Findeks puanı yeterli.");
             }
-            else { return new ErrorResult("Findeks puanı yetersiz."); }
+            else 
+            {
+                return new ErrorResult("Findeks puanınız yetersiz."); 
+            }
         }
         public IResult FindeksScoreAddOrUpdate(int customerId) //findeks puanı varsa güncelleme yapılarak gerekli puan eklenir.
         {//müşterinin findeks puanı yoksa yani daha önce araç kiralamadıysa findeks puanı eklenir.

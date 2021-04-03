@@ -22,12 +22,12 @@ namespace Console1
 
         }
 
-        private static void RentalAddTest()
-        {
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            var result = rentalManager.Add(new Rental { CarId = 2, CustomerId = 2, RentDate = new DateTime(2021, 03, 14) });
-            Console.WriteLine(result.Message);
-        }
+        //private static void RentalAddTest()
+        //{
+        //    RentalManager rentalManager = new RentalManager(new EfRentalDal());
+        //    var result = rentalManager.Add(new Rental { CarId = 2, CustomerId = 2, RentDate = new DateTime(2021, 03, 14) });
+        //    Console.WriteLine(result.Message);
+        //}
 
         //private static void UserAddTest()
         //{

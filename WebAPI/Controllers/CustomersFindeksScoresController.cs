@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
             _customerFindeksScoreService = customerFindeksScoreService;
         }
         //puan ekleme kiralama yapılırken
-        [HttpPost("checkFindeksScore")]
+        [HttpGet("checkFindeksScore")]
         public IActionResult CheckFindeksScore(int carId, int customerId)
         {
             var result = _customerFindeksScoreService.CheckFindeksScore(carId, customerId);

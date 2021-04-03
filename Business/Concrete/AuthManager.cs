@@ -1,9 +1,11 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Core.Aspects.Autofac.Transaction;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using Core.Utilities.Security.Hashing;
 using Core.Utilities.Security.JWT;
+using Entities.Concrete;
 using Entities.DTOs;
 
 namespace Business.Concrete
@@ -12,11 +14,13 @@ namespace Business.Concrete
     {
         private IUserService _userService;
         private ITokenHelper _tokenHelper;
+        private ICustomerService _customerService;
 
-        public AuthManager(IUserService userService, ITokenHelper tokenHelper)
+        public AuthManager(IUserService userService, ITokenHelper tokenHelper, ICustomerService customerService)
         {
             _userService = userService;
             _tokenHelper = tokenHelper;
+            _customerService = customerService;
         }
 
         public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
@@ -67,6 +71,32 @@ namespace Business.Concrete
             var accessToken = _tokenHelper.CreateToken(user, claims);
             return new SuccessDataResult<AccessToken>(accessToken, Messages.TokenCreated);
         }
+        [TransactionScopeAspect]
+        public IDataResult<UserForUpdateDto> Update(UserForUpdateDto userForUpdateDto)
+        {
+            var user = _userService.GetById(userForUpdateDto.UserId);
+            var customer = _customerService.GetByUserId(user.Id);
+            var newUser = new User
+            {
+                Id=user.Id,
+                Email = userForUpdateDto.Email,
+                FirstName = userForUpdateDto.FirstName,
+                LastName = userForUpdateDto.LastName,
+                PasswordHash = user.PasswordHash,
+                PasswordSalt = user.PasswordSalt,
+                Status = true
+            };
+            var newCustomer = new Customer
+            {
+                 CustomerId=customer.Data.CustomerId,
+                 UserId=customer.Data.UserId,
+                 CompanyName=userForUpdateDto.CompanyName
+            };
 
+            _userService.Update(newUser);
+            _customerService.Update(newCustomer);
+            return new SuccessDataResult<UserForUpdateDto>(userForUpdateDto, Messages.UserUpdated);
+        }
+      
     }
 }
