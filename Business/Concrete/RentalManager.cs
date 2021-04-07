@@ -89,7 +89,7 @@ namespace Business.Concrete
             else
             { return new ErrorResult(); }
         }
-
+        //(araçdurum)rentalId,aracıteslimedenkişi(firmadan),tarih,aracıteslimalankişi(firmadan),tarih
         
         
 
