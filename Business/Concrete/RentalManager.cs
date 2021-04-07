@@ -35,12 +35,12 @@ namespace Business.Concrete
             IResult result = BusinessRules.Run(CheckRentDate(rental));
             if (result != null)
             { 
-                return new ErrorResult("Araç girdiğiniz tarihlerde uygun değil."); }
+                return new ErrorResult(Messages.InvalidDates); }
 
             else {
                 _rentalDal.Add(rental);
                 _customerFindeksScoreService.FindeksScoreAddOrUpdate(rental.CustomerId);
-                return new SuccessResult("Araç kiralandı"); }
+                return new SuccessResult(Messages.CarRented); }
             
             
         }

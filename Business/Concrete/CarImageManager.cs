@@ -69,7 +69,7 @@ namespace Business.Concrete
         public IDataResult<List<CarImage>> GetByCarId(int carId)
         {
             if (!checkid(carId).Success)
-            { return new ErrorDataResult<List<CarImage>>("Araç kaydı bulunamadı."); }
+            { return new ErrorDataResult<List<CarImage>>(Messages.CarRegistrationNotFound); }
             else
             {
                 var result = _carImageDal.GetAll(c => c.CarId == carId);

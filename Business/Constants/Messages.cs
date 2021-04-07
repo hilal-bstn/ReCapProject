@@ -1,4 +1,5 @@
 ﻿using Core.Entities.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -45,5 +46,11 @@ namespace Business.Constants
         public static string RentalDetailsListed="Araç Kiralamaları Listelendi";
         public static string CustomerFindeksScoreAdded="Findeks Puanı Eklendi";
         public static string CustomerFindeksScoreUpdated="Findeks Puanı Güncellendi";
+        public static string PasswordUpdate="Şifreniz Güncellendi..";
+        public static string OldPasswordWrong="Eski şifrenizi yanlış girdiniz.";
+        public static string CarRegistrationNotFound = "Araç kaydı bulunamadı..";
+        public static string CarRented="Araç kiralandı.";
+        public static string InvalidDates= "Araç girdiğiniz tarihlerde uygun değil.";
+        public static string CredidCardAdd="Kart bilgileriniz kayıt edildi.";
     }
 }

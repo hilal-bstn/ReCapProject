@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -20,7 +21,7 @@ namespace Business.Concrete
         public IResult Add(UserCreditCard userCreditCard)
         {
            _userCreditCardDal.Add(userCreditCard);
-            return new SuccessResult("Kredi kartı bilgileriniz kaydedildi.");
+            return new SuccessResult(Messages.CredidCardAdd);
         }
         public IDataResult<List<UserCreditCard>> GetByUserId(int id)
         {

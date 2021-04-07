@@ -64,7 +64,18 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest("eklenmiyor");
+            return BadRequest(result.Message);
+        }
+        [HttpPost("passwordupdate")]
+        public IActionResult PasswordUpdate(int userId,string oldPassword,string newPassword)
+        {
+
+            var result = _authService.PasswordUpdate(userId, oldPassword, newPassword);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
         }
     }
 }
