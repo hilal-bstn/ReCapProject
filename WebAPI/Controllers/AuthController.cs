@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Entities;
 using Entities.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -67,10 +68,10 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
         [HttpPost("passwordupdate")]
-        public IActionResult PasswordUpdate(int userId,string oldPassword,string newPassword)
+        public IActionResult PasswordUpdate(PasswordUpdate passwordUpdate)
         {
 
-            var result = _authService.PasswordUpdate(userId, oldPassword, newPassword);
+            var result = _authService.PasswordUpdate(passwordUpdate);
             if (result.Success)
             {
                 return Ok(result);

@@ -6,6 +6,7 @@ using Core.Utilities.Business;
 using Core.Utilities.Results;
 using Core.Utilities.Security.Hashing;
 using Core.Utilities.Security.JWT;
+using Entities;
 using Entities.Concrete;
 using Entities.DTOs;
 
@@ -99,35 +100,29 @@ namespace Business.Concrete
             return new SuccessDataResult<UserForUpdateDto>(userForUpdateDto, Messages.UserUpdated);
         }
 
-        public IResult PasswordUpdate(int userId, string oldPassword, string newpassword)
+        public IResult PasswordUpdate(PasswordUpdate passwordUpdate )
         {
-            var u = _userService.GetById(userId);
-            IResult result = BusinessRules.Run(checkUserOldPassword(userId,oldPassword));
-            if (result != null)
+            var u = _userService.GetById(passwordUpdate.UserId);
+            if (u == null)
             {
-                return new ErrorResult(Messages.OldPasswordWrong);
+                return new ErrorDataResult<User>(Messages.UserNotFound);
             }
 
-            else
+            if (!HashingHelper.VerifyPasswordHash(passwordUpdate.OldPassword, u.PasswordHash, u.PasswordSalt))
             {
+                return new ErrorDataResult<User>(Messages.ErrorPassword);
+            }
+
+            
                 byte[] passwordHash, passwordSalt;
-                HashingHelper.CreatePasswordHash(newpassword, out passwordHash, out passwordSalt);
+                HashingHelper.CreatePasswordHash(passwordUpdate.NewPassword, out passwordHash, out passwordSalt);
                 u.PasswordHash = passwordHash;
                 u.PasswordSalt = passwordSalt;
                 _userService.Update(u);
                 return new SuccessResult(Messages.PasswordUpdate);
-            }
+            
 
         }
-        private IResult checkUserOldPassword(int userId, string oldPassword)
-        {
-            var u = _userService.GetById(userId);
-            byte[] passwordHash, passwordSalt;
-            HashingHelper.CreatePasswordHash(oldPassword, out passwordHash, out passwordSalt);
-            if (u.PasswordHash == passwordHash && u.PasswordSalt == passwordSalt)
-            { return new SuccessResult(); }
-            else
-            { return new ErrorResult(); }
-        }
+        
     }
 }
