@@ -51,7 +51,7 @@ namespace Business.Concrete
             }
 
             if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
-            {
+            {//gönderilen şifre kayıtlı şifreye eşit değilse
                 return new ErrorDataResult<User>(Messages.ErrorPassword);
             }
 
@@ -105,12 +105,12 @@ namespace Business.Concrete
             var u = _userService.GetById(passwordUpdate.UserId);
             if (u == null)
             {
-                return new ErrorDataResult<User>(Messages.UserNotFound);
+                return new ErrorResult(Messages.UserNotFound);
             }
 
             if (!HashingHelper.VerifyPasswordHash(passwordUpdate.OldPassword, u.PasswordHash, u.PasswordSalt))
             {
-                return new ErrorDataResult<User>(Messages.ErrorPassword);
+                return new ErrorResult(Messages.ErrorPassword);
             }
 
             
