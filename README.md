@@ -60,6 +60,7 @@
 					<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForRegisterDto.cs">UserForRegisterDto.cs</a><br>
 				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/DTOs/UserForUpdateDto.cs">UserForUpdateDto.cs</a><br>
 				</ul>
+				 <td>&#x1F4C4; </tr><a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Entities/PasswordUpdate.cs">PasswordUpdate.cs</a>
 			
 </ul>		
                  
