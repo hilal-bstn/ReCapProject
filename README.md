@@ -158,11 +158,11 @@
 </ul>
 <ul type="disc">
 	<tr>
-        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/BusinessAspect"> Business Aspect</a>
+        <td>&#128194; </tr><a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/BusinessAspects"> Business Aspect</a>
              <ul>
-		                <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/tree/master/Business/BusinessAspect/Autofac">Autofac</a><br>
+		                <td>&#128194;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/BusinessAspects/Autofac">Autofac</a><br>
 				<ul>
-				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/BusinessAspect/Autofac/SecuredOperation.cs">SecuredOperation.cs</a><br>
+				<td>&#x1F4C4;<a href="https://github.com/hilal-bstn/ReCapProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs">SecuredOperation.cs</a><br>
 </ul>	
 </ul>
 </ul>
